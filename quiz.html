@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exoplanet Quiz Practice</title>
+    <video id="backgroundVideo" autoplay loop muted style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="assets/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <style>
+        /* Basic reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevents scrolling */
+        }
+
+        #backgroundVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video covers the entire background */
+            z-index: -1; /* Places the video behind other content */
+        }
+
+        body {
+            background-image: url('space-bg.jpg'); /* Starry space background */
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            display: flex;
+            flex-direction: column; /* Changed to column to stack elements */
+            align-items: center; /* Center elements horizontally */
+            height: 100vh; /* Ensures full viewport height */
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            color: #fff;
+            box-shadow: 0 4px 10px rgba(244, 243, 243, 0.6);
+            backdrop-filter: brightness(80%) blur(8px);
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            z-index: 1000;
+            position: relative; /* Changes position to relative */
+        }
+
+        /* Left side (Logo + Links) */
+        .navbar-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            max-width: 200px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            margin-left: 630px; /* Adjusted margin */
+            margin-top: 10px;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #f5f2f2;
+            font-size: 1.2rem;
+            font-weight: bold;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        /* Navbar hover effect */
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #00d4ff;
+            transition: width 0.4s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Right side (Search bar) */
+        .navbar-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 2px solid #00d4ff;
+            background-color: transparent;
+            outline: none;
+            font-size: 1rem;
+            color: white;
+            width: 250px;
+            transition: width 0.4s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            z-index: 1010; /* Ensure it's clickable */
+        }
+
+        .search-bar:focus {
+            width: 300px;
+            background-color: #000000;
+            box-shadow: 0 0 10px #00d4ff; /* Add a glow effect */
+        }
+
+        /* Quiz Container */
+        .quiz-container {
+            background-color: rgba(0, 0, 0, 0.85);
+            border-radius: 20px;
+            padding: 30px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            background: black;
+            padding: 20px;
+            border: 1px solid white;
+            margin-top: 180px;
+        }
+
+        .quiz-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            color: #00d4ff;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.7);
+        }
+        .im{
+            margin-top: -4px;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .options {
+            list-style: none;
+            padding: 0;
+        }
+
+        .options li {
+            background-color: #12153d;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .options li:hover {
+            background-color: #00d4ff;
+        }
+
+        .options li.correct {
+            background-color: #4caf50;
+        }
+
+        .options li.incorrect {
+            background-color: #e74c3c;
+        }
+
+        .feedback {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .next-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #00d4ff;
+            color: #000;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .next-btn:hover {
+            background-color: #008fbb;
+        }
+
+        /* Progress Bar Styles */
+        .progress-bar {
+            width: 60px;
+            height: 400px;
+            background-color: #1b263b;
+            border: 3px solid #98c1d9;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        /* Rocket styling */
+        .rocket {
+            width: 55px;
+            height: 60px;
+            background: url('assets/rocket.png') no-repeat center center;  /* Replace with your rocket image path */
+            background-size: contain;
+            position: absolute;
+            bottom: 0;
+            transition: bottom 0.5s ease-in-out, transform 1.5s ease-in-out;
+        }
+        .rocket-fly {
+        bottom: 150vh;  /* Moves the rocket way outside the screen */
+        transform: scale(3) translateY(-200px);  /* Rocket becomes larger and moves up */
+        transition: bottom 2s ease-in, transform 2s ease-in, opacity 2s ease-in;  /* Smooth transition for movement, scaling, and opacity */
+        opacity: 0;  /* Rocket will fade out */
+}
+
+        /* Rocket flying away */
+        /*.rocket-fly {
+            bottom: 110%;  /* Moves the rocket outside the top of the screen */
+            /*transform: scale(3);  /* Makes the rocket larger */
+            /*transition: bottom 2s ease-in, transform 2s ease-in;
+        }*/
+        .rocket-fly {
+        bottom: 150vh;  /* Moves the rocket way outside the screen */
+        transform: scale(3) translateY(-200px);  /* Rocket becomes larger and moves up */
+        transition: bottom 2s ease-in, transform 2s ease-in, opacity 2s ease-in;  /* Smooth transition for movement, scaling, and opacity */
+        opacity: 0;  /* Rocket will fade out */
+}
+
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .quiz-container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo"><img src="assets/logo.png" alt="website logo"></a>
+            <ul class="nav-links">
+                <li><a href="index.html"><img src="assets/home.png" class="im" alt="Home" style="width: 30px; height: 30px;"></a></li>
+                <li><a href="#">Explore</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="navbar-right">
+            <input type="text" class="search-bar" placeholder="Search...">
+        </div>
+    </nav>
+
+    <div class="quiz-container">
+        <div class="quiz-content">
+            <div class="quiz-header">
+                <h1>Exoplanet Quiz</h1>
+            </div>
+            <div class="quiz-content">
+                <p class="question"></p>
+                <ul class="options"></ul>
+            </div>
+            <div class="feedback"></div>
+            <button class="next-btn" style="display: none;">Next Question</button>
+        </div>
+
+        <div class="progress-bar">
+            <div class="rocket" id="rocket"></div>
+        </div>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "Which of the following is the first exoplanet discovered?",
+                options: ["Kepler-22b", "51 Pegasi b", "Proxima Centauri b", "HD 209458 b"],
+                answer: 1 // 51 Pegasi b
+            },
+            {
+                question: "What is the primary method used to discover most exoplanets?",
+                options: ["Direct Imaging", "Transit Method", "Radial Velocity", "Gravitational Lensing"],
+                answer: 1 // Transit Method
+            },
+            {
+                question: "What type of star is most likely to have exoplanets?",
+                options: ["G-type", "K-type", "M-type", "All of the above"],
+                answer: 3 // All of the above
+            },
+            {
+                question: "Which planet is known for having a dense atmosphere with high-pressure conditions?",
+                options: ["Mars", "Venus", "Mercury", "Jupiter"],
+                answer: 1 // Venus
+            },
+            {
+                question: "What is the name of the telescope primarily used to discover exoplanets?",
+                options: ["Hubble Space Telescope", "Kepler Space Telescope", "James Webb Space Telescope", "Spitzer Space Telescope"],
+                answer: 1 // Kepler Space Telescope
+            },
+            // {
+            //     question: "Which of the following is NOT an exoplanet?",
+            //     options: ["HD 209458 b", "TrES-2b", "Proxima Centauri b", "Earth"],
+            //     answer: 3 // Earth
+            // },
+            // {
+            //     question: "What is the habitable zone?",
+            //     options: ["Area around a star where liquid water can exist", "The region of space with no stars", "A term used for gas giants", "The zone where asteroids are located"],
+            //     answer: 0 // Area around a star where liquid water can exist
+            // },
+            // {
+            //     question: "Which gas is most commonly found in the atmospheres of gas giants?",
+            //     options: ["Oxygen", "Carbon Dioxide", "Methane", "Hydrogen"],
+            //     answer: 3 // Hydrogen
+            // },
+            // {
+            //     question: "Which exoplanet is known as 'Hot Jupiter'?",
+            //     options: ["HD 209458 b", "Kepler-22b", "51 Pegasi b", "Gliese 581 c"],
+            //     answer: 2 // 51 Pegasi b
+            // },
+            // {
+            //     question: "What does the term 'super-Earth' refer to?",
+            //     options: ["An exoplanet with a mass larger than Earth's", "A planet in our solar system", "A planet larger than Jupiter", "A type of star"],
+            //     answer: 0 // An exoplanet with a mass larger than Earth's
+            // },
+            // {
+            //     question: "Which space agency launched the TESS mission to search for exoplanets?",
+            //     options: ["NASA", "ESA", "Roscosmos", "ISRO"],
+            //     answer: 0 // NASA
+            // },
+            // {
+            //     question: "What is the significance of the transit method?",
+            //     options: ["It measures a planet's temperature", "It detects planets by observing their shadow on the star", "It identifies planets by their gravity", "None of the above"],
+            //     answer: 1 // It detects planets by observing their shadow on the star
+            // },
+            // {
+            //     question: "Which exoplanet is considered a potential candidate for life?",
+            //     options: ["Kepler-186f", "HD 189733 b", "TrES-2b", "51 Pegasi b"],
+            //     answer: 0 // Kepler-186f
+            // },
+            // {
+            //     question: "What is the main component of the atmosphere of Venus?",
+            //     options: ["Oxygen", "Carbon Dioxide", "Nitrogen", "Methane"],
+            //     answer: 1 // Carbon Dioxide
+            // },
+            // {
+            //     question: "What is the primary aim of the James Webb Space Telescope?",
+            //     options: ["To find dark matter", "To explore the solar system", "To study the formation of stars and galaxies", "To observe exoplanets only"],
+            //     answer: 2 // To study the formation of stars and galaxies
+            // },
+            // {
+            //     question: "Which of the following methods uses the Doppler effect to detect exoplanets?",
+            //     options: ["Transit Method", "Radial Velocity", "Direct Imaging", "Gravitational Lensing"],
+            //     answer: 1 // Radial Velocity
+            // },
+            // {
+            //     question: "What is the typical temperature range in the habitable zone?",
+            //     options: ["-50 to 0°C", "0 to 100°C", "50 to 150°C", "0 to 50°C"],
+            //     answer: 1 // 0 to 100°C
+            // },
+            // {
+            //     question: "Which exoplanet has the shortest orbital period?",
+            //     options: ["HD 209458 b", "51 Pegasi b", "Proxima Centauri b", "TrES-2b"],
+            //     answer: 0 // HD 209458 b
+            // },
+            // {
+            //     question: "What do we call a planet that orbits two stars?",
+            //     options: ["Circumbinary planet", "Exoplanet", "Gas giant", "Super-Earth"],
+            //     answer: 0 // Circumbinary planet
+            // },
+        ];
+
+        let currentQuestionIndex = 0;
+        let totalTime = 0;  // Total time for the quiz
+        let questionStartTime = 0;  // Time when the current question is loaded
+        const questionElement = document.querySelector('.question');
+        const optionsElement = document.querySelector('.options');
+        const feedbackElement = document.querySelector('.feedback');
+        const nextButton = document.querySelector('.next-btn');
+        const rocket = document.getElementById('rocket');
+        const progressBarHeight = 400;
+        const totalQuestions = questions.length;
+
+        // function loadQuestion() {
+        //     const currentQuestion = questions[currentQuestionIndex];
+        //     questionElement.textContent = currentQuestion.question;
+        //     optionsElement.innerHTML = '';
+        //     currentQuestion.options.forEach((option, index) => {
+        //         const li = document.createElement('li');
+        //         li.textContent = option;
+        //         li.addEventListener('click', () => selectAnswer(index));
+        //         optionsElement.appendChild(li);
+        //     });
+        //     feedbackElement.textContent = '';
+        //     nextButton.style.display = 'none';
+        //     updateRocketPosition();
+        //     questionStartTime = Date.now();  // Track the start time of the question
+        // }
+
+        // function selectAnswer(selectedIndex) {
+        //     const currentQuestion = questions[currentQuestionIndex];
+        //     const options = optionsElement.querySelectorAll('li');
+        //     options[selectedIndex].classList.add(selectedIndex === currentQuestion.answer ? 'correct' : 'incorrect');
+        //     options[currentQuestion.answer].classList.add('correct');
+        //     feedbackElement.textContent = selectedIndex === currentQuestion.answer ? 'Correct!' : 'Incorrect!';
+            
+        //     // Calculate the time taken for this question
+        //     const questionTime = (Date.now() - questionStartTime) / 1000;  // Time in seconds
+        //     totalTime += questionTime;  // Add to total time
+            
+        //     nextButton.style.display = 'block';
+        //     nextButton.onclick = () => {
+        //         currentQuestionIndex++;
+        //         if (currentQuestionIndex < totalQuestions) {
+        //             loadQuestion();
+        //         } else {
+        //             showFinalScore();
+        //         }
+        //     };
+        // }
+
+        function loadQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = currentQuestion.question;
+    optionsElement.innerHTML = '';
+    currentQuestion.options.forEach((option, index) => {
+        const li = document.createElement('li');
+        li.textContent = option;
+        li.addEventListener('click', () => selectAnswer(index));
+        optionsElement.appendChild(li);
+    });
+    feedbackElement.textContent = '';
+    nextButton.style.display = 'none';
+    
+    // Reset the question start time
+    questionStartTime = Date.now();  // Track the start time of the question
+    updateRocketPosition();
+}
+
+function selectAnswer(selectedIndex) {
+    const currentQuestion = questions[currentQuestionIndex];
+    const options = optionsElement.querySelectorAll('li');
+    
+    // Mark selected and correct answers
+    options[selectedIndex].classList.add(selectedIndex === currentQuestion.answer ? 'correct' : 'incorrect');
+    options[currentQuestion.answer].classList.add('correct');
+    
+    feedbackElement.textContent = selectedIndex === currentQuestion.answer ? 'Correct!' : 'Incorrect!';
+
+    // Calculate the time taken for this question
+    const questionTime = (Date.now() - questionStartTime) / 1000;  // Time in seconds
+    totalTime += questionTime;  // Add to total time
+    
+    nextButton.style.display = 'block';
+    nextButton.onclick = () => {
+        currentQuestionIndex++;
+        if (currentQuestionIndex < totalQuestions) {
+            loadQuestion();
+        } else {
+            showFinalScore();
+        }
+    };
+}
+
+
+        function updateRocketPosition() {
+            const progress = ((currentQuestionIndex + 1) / totalQuestions) * progressBarHeight;
+            rocket.style.bottom = `${progress}px`;
+        }
+
+        function showFinalScore() {
+    questionElement.textContent = `Quiz Completed! You answered ${currentQuestionIndex} out of ${totalQuestions} questions.`;
+    optionsElement.innerHTML = '';
+    feedbackElement.textContent = `Total time taken: ${totalTime.toFixed(2)} seconds`;
+    nextButton.style.display = 'none';
+
+    // Center the text
+    feedbackElement.style.textAlign = 'center';
+    questionElement.style.textAlign = 'center';
+
+    // Rocket flies away and increases in size
+    rocket.classList.add('rocket-fly');
+
+    // Set a timeout to hide the progress bar after the animation duration
+    setTimeout(() => {
+        document.querySelector('.progress-bar').style.display = 'none';
+    }, 2000); // Adjust the time (in milliseconds) according to your animation duration
+}
+
+
+
+
+
+        loadQuestion();  // Load the first question
+        </script>
+</body>
+</html>

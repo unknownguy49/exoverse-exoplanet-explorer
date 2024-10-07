@@ -1,8 +1,8 @@
 var radius = 240; // how big of the radius
 var autoRotate = true; // auto rotate or not
 var rotateSpeed = -60; // unit: seconds/360 degrees
-var imgWidth = 120; // width of images (unit: px)
-var imgHeight = 170; // height of images (unit: px)
+var imgWidth = 170; // width of images (unit: px)
+var imgHeight = 220; // height of images (unit: px)
 
 // Link of background music - set 'null' if you dont want to play background music
 var bgMusicURL = 'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';
@@ -71,47 +71,53 @@ if (bgMusicURL) {
 }
 
 // setup events
-document.onpointerdown = function (e) {
-  clearInterval(odrag.timer);
-  e = e || window.event;
-  var sX = e.clientX,
-      sY = e.clientY;
+// document.onpointerdown = function (e) {
+//   clearInterval(odrag.timer);
+//   e = e || window.event;
+//   var sX = e.clientX,
+//       sY = e.clientY;
 
-  this.onpointermove = function (e) {
-    e = e || window.event;
-    var nX = e.clientX,
-        nY = e.clientY;
-    desX = nX - sX;
-    desY = nY - sY;
-    tX += desX * 0.1;
-    tY += desY * 0.1;
-    applyTranform(odrag);
-    sX = nX;
-    sY = nY;
-  };
+//   this.onpointermove = function (e) {
+//     e = e || window.event;
+//     var nX = e.clientX,
+//         nY = e.clientY;
+//     desX = nX - sX;
+//     desY = nY - sY;
+//     tX += desX * 0.1;
+//     tY += desY * 0.1;
+//     applyTranform(odrag);
+//     sX = nX;
+//     sY = nY;
+//   };
 
-  this.onpointerup = function (e) {
-    odrag.timer = setInterval(function () {
-      desX *= 0.95;
-      desY *= 0.95;
-      tX += desX * 0.1;
-      tY += desY * 0.1;
-      applyTranform(odrag);
-      playSpin(false);
-      if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
-        clearInterval(odrag.timer);
-        playSpin(true);
-      }
-    }, 17);
-    this.onpointermove = this.onpointerup = null;
-  };
+//   this.onpointerup = function (e) {
+//     odrag.timer = setInterval(function () {
+//       desX *= 0.95;
+//       desY *= 0.95;
+//       tX += desX * 0.1;
+//       tY += desY * 0.1;
+//       applyTranform(odrag);
+//       playSpin(false);
+//       if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
+//         clearInterval(odrag.timer);
+//         playSpin(true);
+//       }
+//     }, 17);
+//     this.onpointermove = this.onpointerup = null;
+//   };
 
-  return false;
-};
+//   return false;
+// };
 
-document.onmousewheel = function(e) {
-  e = e || window.event;
-  var d = e.wheelDelta / 20 || -e.detail;
-  radius += d;
-  init(1);
+// document.onmousewheel = function(e) {
+//   e = e || window.event;
+//   var d = e.wheelDelta / 20 || -e.detail;
+//   radius += d;
+//   init(1);
+// };
+
+document.getElementById("myform").onsubmit = function(e) {
+  e.preventDefault(); // Prevent default form submission
+  // Perform any additional actions (e.g., form validation or AJAX request)
+  location.reload(); // Refresh the page
 };

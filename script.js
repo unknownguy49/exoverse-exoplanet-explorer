@@ -141,45 +141,55 @@ const factText = document.getElementById('fact');
 let factIndex = 0;
 let letterIndex = 0;
 let intervalId;
+let totalResources = 0;
+let loadedResources = 0;
 
 function typeFact(fact) {
   if (letterIndex < fact.length) {
     factText.innerHTML += fact.charAt(letterIndex);
     letterIndex++;
-    setTimeout(() => typeFact(fact), 100); // Control typing speed
+    setTimeout(() => typeFact(fact), 100);
   } else {
-    setTimeout(() => nextFact(), 5000); // Hold for 5 seconds
+    setTimeout(() => nextFact(), 5000);
   }
 }
 
 function nextFact() {
-  if (progress >= 100) {
-    clearInterval(intervalId);
+  factIndex = (factIndex + 1) % facts.length;
+  factText.innerHTML = '';
+  letterIndex = 0;
+  typeFact(facts[factIndex]);
+}
+
+// Function to update progress bar based on loaded resources
+function updateProgress() {
+  loadedResources++;
+  const progressPercentage = (loadedResources / totalResources) * 100;
+  progressBar.style.width = progressPercentage + '%';
+
+  if (loadedResources === totalResources) {
     document.getElementById('loading-screen').style.display = 'none';
     document.getElementById('content').style.display = 'block';
-  } else {
-    factIndex = (factIndex + 1) % facts.length;
-    factText.innerHTML = '';
-    letterIndex = 0;
-    typeFact(facts[factIndex]);
   }
 }
 
-// This function simulates loading other resources
-function simulateLoading() {
-  intervalId = setInterval(function() {
-    if (progress < 100) {
-      progress += 10; // Increase progress
-      progressBar.style.width = progress + '%';
+// Track image loading
+function trackResourceLoading() {
+  const images = document.querySelectorAll('img');
+  totalResources = images.length;
+
+  images.forEach((img) => {
+    if (img.complete) {
+      updateProgress();
     } else {
-      clearInterval(intervalId);
-      document.getElementById('loading-screen').style.display = 'none';
-      document.getElementById('content').style.display = 'block';
+      img.addEventListener('load', updateProgress);
+      img.addEventListener('error', updateProgress); // To handle image load failure
     }
-  }, 500);
+  });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+// Start typing facts and tracking resources
+document.addEventListener('DOMContentLoaded', function () {
   typeFact(facts[factIndex]);
-  simulateLoading(); // Start the loading simulation
+  trackResourceLoading(); // Start tracking image loading
 });

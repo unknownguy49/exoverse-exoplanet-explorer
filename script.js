@@ -123,73 +123,73 @@ document.getElementById("myform").onsubmit = function(e) {
 };
 
 
-/*Latest updates
-please remove if makes the deployed website bad*/
+// /*Latest updates
+// please remove if makes the deployed website bad*/
 
-const facts = [
-  "There are over 5,000 confirmed exoplanets.",
-  "Exoplanets can orbit binary star systems.",
-  "Some exoplanets have atmospheres rich in water vapor.",
-  "Exoplanets are discovered using the transit method.",
-  "Hot Jupiters are gas giants orbiting close to their stars.",
-  "Kepler-22b was the first potentially habitable exoplanet found."
-];
+// const facts = [
+//   "There are over 5,000 confirmed exoplanets.",
+//   "Exoplanets can orbit binary star systems.",
+//   "Some exoplanets have atmospheres rich in water vapor.",
+//   "Exoplanets are discovered using the transit method.",
+//   "Hot Jupiters are gas giants orbiting close to their stars.",
+//   "Kepler-22b was the first potentially habitable exoplanet found."
+// ];
 
-let progress = 0;
-const progressBar = document.querySelector('.progress');
-const factText = document.getElementById('fact');
-let factIndex = 0;
-let letterIndex = 0;
-let intervalId;
-let totalResources = 0;
-let loadedResources = 0;
+// let progress = 0;
+// const progressBar = document.querySelector('.progress');
+// const factText = document.getElementById('fact');
+// let factIndex = 0;
+// let letterIndex = 0;
+// let intervalId;
+// let totalResources = 0;
+// let loadedResources = 0;
 
-function typeFact(fact) {
-  if (letterIndex < fact.length) {
-    factText.innerHTML += fact.charAt(letterIndex);
-    letterIndex++;
-    setTimeout(() => typeFact(fact), 100);
-  } else {
-    setTimeout(() => nextFact(), 5000);
-  }
-}
+// function typeFact(fact) {
+//   if (letterIndex < fact.length) {
+//     factText.innerHTML += fact.charAt(letterIndex);
+//     letterIndex++;
+//     setTimeout(() => typeFact(fact), 100);
+//   } else {
+//     setTimeout(() => nextFact(), 5000);
+//   }
+// }
 
-function nextFact() {
-  factIndex = (factIndex + 1) % facts.length;
-  factText.innerHTML = '';
-  letterIndex = 0;
-  typeFact(facts[factIndex]);
-}
+// function nextFact() {
+//   factIndex = (factIndex + 1) % facts.length;
+//   factText.innerHTML = '';
+//   letterIndex = 0;
+//   typeFact(facts[factIndex]);
+// }
 
-// Function to update progress bar based on loaded resources
-function updateProgress() {
-  loadedResources++;
-  const progressPercentage = (loadedResources / totalResources) * 100;
-  progressBar.style.width = progressPercentage + '%';
+// // Function to update progress bar based on loaded resources
+// function updateProgress() {
+//   loadedResources++;
+//   const progressPercentage = (loadedResources / totalResources) * 100;
+//   progressBar.style.width = progressPercentage + '%';
 
-  if (loadedResources === totalResources) {
-    document.getElementById('loading-screen').style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-  }
-}
+//   if (loadedResources === totalResources) {
+//     document.getElementById('loading-screen').style.display = 'none';
+//     document.getElementById('content').style.display = 'block';
+//   }
+// }
 
-// Track image loading
-function trackResourceLoading() {
-  const images = document.querySelectorAll('img');
-  totalResources = images.length;
+// // Track image loading
+// function trackResourceLoading() {
+//   const images = document.querySelectorAll('img');
+//   totalResources = images.length;
 
-  images.forEach((img) => {
-    if (img.complete) {
-      updateProgress();
-    } else {
-      img.addEventListener('load', updateProgress);
-      img.addEventListener('error', updateProgress); // To handle image load failure
-    }
-  });
-}
+//   images.forEach((img) => {
+//     if (img.complete) {
+//       updateProgress();
+//     } else {
+//       img.addEventListener('load', updateProgress);
+//       img.addEventListener('error', updateProgress); // To handle image load failure
+//     }
+//   });
+// }
 
-// Start typing facts and tracking resources
-document.addEventListener('DOMContentLoaded', function () {
-  typeFact(facts[factIndex]);
-  trackResourceLoading(); // Start tracking image loading
-});
+// // Start typing facts and tracking resources
+// document.addEventListener('DOMContentLoaded', function () {
+//   typeFact(facts[factIndex]);
+//   trackResourceLoading(); // Start tracking image loading
+// });

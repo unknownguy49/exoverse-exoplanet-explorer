@@ -655,6 +655,7 @@ textarea {
 /*Latest updates
 please remove if makes the deployed website bad*/
 
+/*
 #loading-screen {
   position: fixed;
   width: 100%;
@@ -670,30 +671,30 @@ please remove if makes the deployed website bad*/
 
 .loading-container {
   text-align: center;
-  width: 30%; /* To prevent text growth from shifting the layout */
+  width: 30%;
 }
 
 #fact {
   font-size: 1.5rem;
   margin-bottom: 20px;
-  height: 30px; /* Added fixed height to prevent layout shift */
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .progress-bar {
-  width: 100%; /* Fixed width for the progress bar holder */
+  width: 100%;
   background-color: #444;
   height: 10px;
   border-radius: 5px;
-  overflow: hidden; /* Prevent overflow */
+  overflow: hidden; 
 }
 
 .progress {
   background-color: #0099ff;
   height: 100%;
-  width: 0%; /* Start at 0 and grow dynamically */
+  width: 0%; 
   transition: width 0.5s ease;
   border-radius: 5px;
-}
+}*/

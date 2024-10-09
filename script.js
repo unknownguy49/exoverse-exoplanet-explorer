@@ -121,3 +121,60 @@ document.getElementById("myform").onsubmit = function(e) {
   // Perform any additional actions (e.g., form validation or AJAX request)
   location.reload(); // Refresh the page
 };
+
+
+/*Latest updates
+please remove if makes the deployed website bad*/
+
+const facts = [
+  "There are over 5,000 confirmed exoplanets.",
+  "Exoplanets can orbit binary star systems.",
+  "Some exoplanets have atmospheres rich in water vapor.",
+  "Exoplanets are discovered using the transit method.",
+  "Hot Jupiters are gas giants orbiting close to their stars.",
+  "Kepler-22b was the first potentially habitable exoplanet found."
+];
+
+let progress = 0;
+const progressBar = document.querySelector('.progress');
+const factText = document.getElementById('fact');
+let factIndex = 0;
+let letterIndex = 0;
+let intervalId;
+
+function typeFact(fact) {
+  if (letterIndex < fact.length) {
+    factText.innerHTML += fact.charAt(letterIndex);
+    letterIndex++;
+    setTimeout(() => typeFact(fact), 100); // Control typing speed
+  } else {
+    setTimeout(() => nextFact(), 5000); // Hold for 5 seconds
+  }
+}
+
+function nextFact() {
+  if (progress >= 100) {
+    clearInterval(intervalId);
+    document.getElementById('loading-screen').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+  } else {
+    factIndex = (factIndex + 1) % facts.length;
+    factText.innerHTML = '';
+    letterIndex = 0;
+    typeFact(facts[factIndex]);
+  }
+}
+
+window.onload = function() {
+  typeFact(facts[factIndex]);
+
+  intervalId = setInterval(function() {
+    progress += 10;
+    progressBar.style.width = progress + '%';
+    if (progress >= 100) {
+      clearInterval(intervalId);
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    }
+  }, 500);
+};

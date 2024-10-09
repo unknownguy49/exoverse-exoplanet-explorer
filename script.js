@@ -165,16 +165,21 @@ function nextFact() {
   }
 }
 
-window.onload = function() {
-  typeFact(facts[factIndex]);
-
+// This function simulates loading other resources
+function simulateLoading() {
   intervalId = setInterval(function() {
-    progress += 10;
-    progressBar.style.width = progress + '%';
-    if (progress >= 100) {
+    if (progress < 100) {
+      progress += 10; // Increase progress
+      progressBar.style.width = progress + '%';
+    } else {
       clearInterval(intervalId);
       document.getElementById('loading-screen').style.display = 'none';
       document.getElementById('content').style.display = 'block';
     }
   }, 500);
-};
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  typeFact(facts[factIndex]);
+  simulateLoading(); // Start the loading simulation
+});

@@ -2,7 +2,6 @@
 
 <table>
   <tr>
-    <!-- Card 1 -->
     <td style="width:400px;">
       <table style="width:400px; height: 180px; border: 1px solid #ccc;">
         <tr>
@@ -18,7 +17,6 @@
         </tr>
       </table>
     </td>
-    <!-- Card 2 -->
     <td style="width:400px;">
       <table style="width:400px; height: 180px; border: 1px solid #ccc;">
         <tr>
@@ -35,8 +33,8 @@
       </table>
     </td>
   </tr>
+  
   <tr>
-    <!-- Card 3 -->
     <td style="width:400px;">
       <table style="width:400px; height: 180px; border: 1px solid #ccc;">
         <tr>
@@ -52,7 +50,6 @@
         </tr>
       </table>
     </td>
-    <!-- Card 4 -->
     <td style="width:400px;">
       <table style="width:400px; height: 180px; border: 1px solid #ccc;">
         <tr>
@@ -70,8 +67,8 @@
       </table>
     </td>
   </tr>
+
   <tr>
-    <!-- Card 5 -->
     <td style="width:400px;">
       <table style="width:400px; height: 180px; border: 1px solid #ccc;">
         <tr>
@@ -87,7 +84,6 @@
         </tr>
       </table>
     </td>
-    <!-- Card 6 -->
     <td style="width:400px;">
       <table style="width:400px; height: 180px; border: 1px solid #ccc;">
         <tr>

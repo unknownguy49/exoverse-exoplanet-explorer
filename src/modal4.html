@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modal viewer">
+    <title>Circumbinary Exoplanets</title>
+    <link rel="stylesheet" href="/src/modal_style.css">
+    <script src="/src/modal_script.js" defer></script>
+    <video id="backgroundVideo" autoplay loop muted style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="/assets/video.mp4" type="video/mp4">
+    </video>
+</head>
+<body>
+    <section id="pr" style="padding-top: 30px;">
+        <h1 style="font-size:50px; color:antiquewhite";>Circumbinary Planets</h1>
+        <h2>Take a look at few examples of Circumbinary Planets </h2><br>
+        <section id="projects" style="padding-top: 30px; padding-bottom: 30px">
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/kepler16b.jpg" alt="Project 1">
+                    <h3>Kepler-16b</h3>
+                    <p>Often called a "real-life Tatooine," as it is the first confirmed circumbinary planet.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal1">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/kepler47c.png" alt="Project 2">
+                    <h3>Kepler-47c</h3>
+                    <p>A gas giant orbiting two stars, making it part of the only known multi-planet circumbinary system.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal2">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/kepler453b.webp" alt="Project 3">
+                    <h3>Kepler-453b</h3>
+                    <p>A Neptune-sized circumbinary planet in the habitable zone of its binary star system.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal3">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/kepler64b.jpg" alt="Project 3">
+                    <h3>PH1b (Kepler-64b)</h3>
+                    <p>Also known as "Planet Hunters 1," is a circumbinary planet in a four-star system, making it extremely rare.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal4">Know More</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Modals -->
+    <div id="projectModal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Kepler-16b: A Real-Life Tatooine</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/kepler16b.jpg" alt="img of Kepler-452b">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~200 light-years</li>
+                            <li>Kepler-16b is often called a "real-life Tatooine," as it is the first confirmed circumbinary planet. It orbits two stars in a near-perfect circle and is likely a cold gas giant with no solid surface.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 229 days</li>
+                            <li>Semi-major Axis: ~0.7 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~0.33 Jupiter masses</li>
+                            <li>Radius: ~0.75 Jupiter radii</li>
+                            <li>Temperature: ~-100°C (-148°F)</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>Kepler-16: A binary star system consisting of two stars, both smaller and cooler than the Sun.</li>
+                            <li>Star 1: K-dwarf star</li>
+                            <li>Star 2: K-dwarf star</li>
+                            <li>Combined Temperature: ~4,500 K</li>
+                            <li>Combined Mass: ~0.69 M☉ (solar masses)</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>Kepler-16b is not considered habitable due to its cold temperatures and gaseous nature.</li>
+                            <li>However, its unique orbital characteristics provide valuable insights into planet formation in binary systems.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2011 by NASA's Kepler Space Telescope.</li>
+                            <li>Future studies may focus on the dynamics of circumbinary planets and their potential for hosting moons.</li>
+                            <li>Understanding Kepler-16b could enhance our knowledge of planetary formation in binary star systems.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="projectModal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Kepler-47c: A Multi-Planet Circumbinary System</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/kepler47c.png" alt="img of Kepler-452b">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~3,400 light-years</li>
+                            <li>Kepler-47c is a gas giant orbiting two stars, making it part of the only known multi-planet circumbinary system. It resides within the habitable zone of its stars, raising interesting possibilities about the potential habitability of its moons if they exist.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 303 days</li>
+                            <li>Semi-major Axis: ~0.989 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~0.36 Jupiter masses</li>
+                            <li>Radius: ~0.94 Jupiter radii</li>
+                            <li>Temperature: ~-23°C (-9.4°F)</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>Kepler-47: A binary star system consisting of two stars, with properties similar to the Sun.</li>
+                            <li>Star 1: G-type star</li>
+                            <li>Star 2: K-type star</li>
+                            <li>Combined Temperature: ~5,600 K</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>While Kepler-47c itself is not considered habitable, its moons could potentially have the right conditions for life.</li>
+                            <li>The existence of water and a stable environment would be crucial for habitability.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2012 by NASA's Kepler Space Telescope.</li>
+                            <li>Future studies may focus on the characteristics of its moons and their potential for habitability.</li>
+                            <li>Understanding Kepler-47c could provide valuable insights into the dynamics of circumbinary systems.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Kepler-453b: A Neptune-Sized Circumbinary Planet</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/kepler453b.webp" alt="img of keplar62f">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~1,400 light-years</li>
+                            <li>Kepler-453b is a Neptune-sized circumbinary planet in the habitable zone of its binary star system. Its orbit is tilted, causing it to move in and out of our view, which makes its discovery unique. The changing seasons due to the dual-star system create a complex climate on the planet.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 240.5 days</li>
+                            <li>Semi-major Axis: ~0.7903 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~0.18 Jupiter masses (~57 Earth masses)</li>
+                            <li>Radius: ~6.2 Earth radii</li>
+                            <li>Temperature: ~-29°C (-20.2°F)</li>
+                  
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>Kepler-453: A binary star system consisting of two stars, with properties similar to the Sun.</li>
+                            <li>Star 1: G-type star</li>
+                            <li>Star 2: K-type star</li>
+                            <li>Combined Temperature: ~5,700 K</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>Kepler-453b itself may not be habitable, but its complex climate could support various conditions for life, especially if any moons exist.</li>
+                            <li>The study of its environment may yield insights into potential habitability in circumbinary systems.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2015 by NASA's Kepler Space Telescope.</li>
+                            <li>Future studies may focus on the characteristics of its atmosphere and climate.</li>
+                            <li>The unique orbital dynamics of Kepler-453b make it a candidate for further investigation into circumbinary planets.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>HD 219134 b: A Rocky Terrestrial Exoplanet</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/kepler64b.jpg" alt="img of keplar62f">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~5,000 light-years</li>
+                            <li>PH1b, also known as "Planet Hunters 1," is a circumbinary planet in a four-star system, making it extremely rare. It orbits a pair of stars, which are themselves orbited by a second pair of stars. It is a gas giant with a very stable orbit despite the gravitational pull from multiple stars.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 138 days</li>
+                            <li>Semi-major Axis: ~0.634 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~0.53 Jupiter masses</li>
+                            <li>Radius: ~0.76 Jupiter radii</li>
+                            <li>Temperature: ~-40°C (-40°F)</li>
+                  
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>PH1b orbits a binary star system consisting of two stars, which are themselves part of a four-star system.</li>
+                            <li>The gravitational dynamics of this system contribute to the stability of its orbit.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>PH1b is unlikely to be habitable due to its gaseous nature and distance from its host stars.</li>
+                            <li>However, its unique characteristics make it an interesting subject for studying the dynamics of circumbinary planets.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2012 as part of the Planet Hunters project.</li>
+                            <li>Future studies may focus on its stability and the effects of its complex gravitational environment on its orbit.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

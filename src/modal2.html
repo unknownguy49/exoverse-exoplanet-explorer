@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modal viewer">
+    <title>Terrestrial Exoplanets</title>
+    <link rel="stylesheet" href="/src/modal_style.css">
+    <script src="/src/modal_script.js" defer></script>
+    <video id="backgroundVideo" autoplay loop muted style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="/assets/video.mp4" type="video/mp4">
+    </video>
+</head>
+<body>
+    <section id="pr" style="padding-top: 30px;">
+        <h1 style="font-size:50px; color:antiquewhite";>Terrestrial Exoplanets</h1>
+        <h2>Take a look at few examples of Terrestrial Exoplanets</h2><br>
+        <section id="projects" style="padding-top: 30px; padding-bottom: 30px">
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/kepler452b.jpg" alt="Project 1">
+                    <h3>Kepler-452b</h3>
+                    <p>A rocky planet located in the habitable zone of a Sun-like star.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal1">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/proximab.jpg" alt="Project 2">
+                    <h3>Proxima Centauri b</h3>
+                    <p>Closest known exoplanet to Earth and orbits within the habitable zone of the red dwarf Proxima Centauri.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal2">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/trappist1d.jpg" alt="Project 3">
+                    <h3>TRAPPIST-1d</h3>
+                    <p>One of seven Earth-sized planets in the TRAPPIST-1 system.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal3">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/hd219134b.webp" alt="Project 3">
+                    <h3>HD 219134 b</h3>
+                    <p>Rocky terrestrial exoplanet located close to its star, making it extremely hot and uninhabitable.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal4">Know More</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Modals -->
+    <div id="projectModal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Kepler-452b: Earth’s Cousin</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/kepler452b.jpg" alt="img of Kepler-452b">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~1,400 light-years</li>
+                            <li>Often called Earth’s “cousin,” Kepler-452b is a rocky planet located in the habitable zone of a Sun-like star. Its size and orbital distance make it a promising candidate for habitability, though its age suggests that it may have undergone significant geological changes.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 385 days</li>
+                            <li>Semi-major Axis: ~1.04 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~5 Earth masses</li>
+                            <li>Radius: ~1.63 Earth radii</li>
+                            <li>Temperature: ~22°C (71.6°F)</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>Kepler-452: A Sun-like star located ~1,400 light-years away.</li>
+                            <li>Temperature: ~5,800 K</li>
+                            <li>Mass: ~1.04 M☉ (solar masses)</li>
+                            <li>Radius: ~1.05 R☉ (solar radii)</li>
+                            <li>Age: ~6 billion years</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>Kepler-452b is located in the habitable zone, raising interest in its potential for life.</li>
+                            <li>Its size and distance from its host star suggest conditions similar to those on Earth, though its age and geological history may present challenges.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2015 by NASA's Kepler Space Telescope.</li>
+                            <li>Future research may focus on its atmosphere and potential for hosting life.</li>
+                            <li>Kepler-452b's discovery has been significant in the search for Earth-like exoplanets.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="projectModal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Proxima Centauri b: The Closest Exoplanet</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/proximab.jpg" alt="img of Kepler-452b">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~4.24 light-years</li>
+                            <li>Proxima Centauri b is the closest known exoplanet to Earth and orbits within the habitable zone of the red dwarf Proxima Centauri. Its proximity makes it a prime candidate for further study, though its habitability is uncertain due to potential stellar flares.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 11.2 days</li>
+                            <li>Semi-major Axis: ~0.0485 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~1.17 Earth masses</li>
+                            <li>Radius: ~1.1 Earth radii</li>
+                            <li>Temperature: ~-39°C (-38.2°F)</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>Proxima Centauri: A red dwarf star located ~4.24 light-years away.</li>
+                            <li>Temperature: ~3,050 K</li>
+                            <li>Mass: ~0.12 M☉ (solar masses)</li>
+                            <li>Radius: ~0.15 R☉ (solar radii)</li>
+                            <li>Age: ~4.8 billion years</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>Proxima Centauri b is located in the habitable zone, raising interest in its potential for life.</li>
+                            <li>However, its exposure to stellar flares poses challenges for retaining an atmosphere and supporting life.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2016 using the radial velocity method.</li>
+                            <li>Future research may focus on its atmosphere and potential for hosting life.</li>
+                            <li>Proxima Centauri b is a key target for the search for life beyond our solar system.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>TRAPPIST-1d: An Earth-Sized Exoplanet</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/trappist1d.jpg" alt="img of keplar62f">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~39 light-years</li>
+                            <li>TRAPPIST-1d is one of seven Earth-sized planets in the TRAPPIST-1 system. It is in the star’s habitable zone and might have liquid water. The system’s unique configuration makes it a prime target for habitability studies.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 4 days</li>
+                            <li>Semi-major Axis: ~0.022 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~0.4 Earth masses</li>
+                            <li>Radius: ~0.77 Earth radii</li>
+                            <li>Temperature: ~15°C (59°F)</li>
+                  
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>TRAPPIST-1: An ultra-cool dwarf star located ~39 light-years away.</li>
+                            <li>Temperature: ~2,500 K</li>
+                            <li>Mass: ~0.08 M☉ (solar masses)</li>
+                            <li>Radius: ~0.12 R☉ (solar radii)</li>
+                            <li>Age: ~7.6 billion years</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>TRAPPIST-1d's position in the habitable zone raises interest in its potential for life.</li>
+                            <li>The possibility of liquid water makes it a prime candidate for habitability studies.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2016 as part of the TRAPPIST-1 system.</li>
+                            <li>Future research will focus on its atmosphere and habitability potential.</li>
+                            <li>The system is an important target for the search for extraterrestrial life.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>HD 219134 b: A Rocky Terrestrial Exoplanet</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/hd219134b.webp" alt="img of keplar62f">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~21 light-years</li>
+                            <li>HD 219134 b is a rocky terrestrial exoplanet located close to its star, making it extremely hot and uninhabitable. It has a thick, rocky crust, and the study of its composition could provide insights into planet formation.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 3.1 days</li>
+                            <li>Semi-major Axis: ~0.038 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~4.5 Earth masses</li>
+                            <li>Radius: ~1.6 Earth radii</li>
+                            <li>Temperature: ~900°C (1,652°F)</li>
+                  
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>HD 219134: A K-dwarf star located ~21 light-years away.</li>
+                            <li>Temperature: ~4,800 K</li>
+                            <li>Mass: ~0.78 M☉ (solar masses)</li>
+                            <li>Radius: ~0.72 R☉ (solar radii)</li>
+                            <li>Age: ~6 billion years</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>HD 219134 b is not considered habitable due to extreme temperatures and proximity to its star.</li>
+                            <li>Its study may provide valuable information about rocky planet formation and evolution.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2015 using radial velocity data.</li>
+                            <li>Future research will focus on its composition and potential geological activity.</li>
+                            <li>Understanding HD 219134 b may shed light on the characteristics of rocky exoplanets.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

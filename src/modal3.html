@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modal viewer">
+    <title>Neptunian Planets</title>
+    <link rel="stylesheet" href="/src/modal_style.css">
+    <script src="/src/modal_script.js" defer></script>
+    <video id="backgroundVideo" autoplay loop muted style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="/assets/video.mp4" type="video/mp4">
+    </video>
+</head>
+<body>
+    <section id="pr" style="padding-top: 30px;">
+        <h1 style="font-size:50px; color:antiquewhite";>Neptunian Planets</h1>
+        <h2>Take a look at few examples of Neptunian Planets</h2><br>
+        <section id="projects" style="padding-top: 30px; padding-bottom: 30px">
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/hatp11b.jpg" alt="Project 1">
+                    <h3>HAT-P-11b</h3>
+                    <p>A warm Neptunian planet known for its water-rich atmosphere.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal1">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/gj436b.jpg" alt="Project 2">
+                    <h3>GJ 436b</h3>
+                    <p>A warm Neptune, exhibits a comet-like tail caused by radiation from its host star stripping away its atmosphere.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal2">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/kepler101b.jpg" alt="Project 3">
+                    <h3>Kepler-101b</h3>
+                    <p>A Neptune-sized planet with a thick gaseous envelope with an unusually high density.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal3">Know More</a>
+                </div>
+            </div>
+
+            <div class="project-thumbnail">
+                <div class="thumbnail-content">
+                    <img src="/assets/toi849b.jpg" alt="Project 4">
+                    <h3>TOI-849b</h3>
+                    <p>Potentially representing the core of a gas giant that lost most of its gaseous envelope.</p>
+                    <a href="#" class="btn know-more" data-modal-target="#projectModal4">Know More</a>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Modals -->
+    <div id="projectModal1" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>HAT-P-11b: A Warm Neptunian Exoplanet</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/hatp11b.jpg" alt="img of Kepler-452b">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~123 light-years</li>
+                            <li>HAT-P-11b is a warm Neptunian planet known for its water-rich atmosphere. It was one of the first exoplanets where water vapor was directly detected in the atmosphere. The planet has a highly eccentric orbit, which leads to significant seasonal changes.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 4.9 days</li>
+                            <li>Semi-major Axis: ~0.053 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~0.08 Jupiter masses (~25 Earth masses)</li>
+                            <li>Radius: ~0.39 Jupiter radii (~4.7 Earth radii)</li>
+                            <li>Temperature: ~878°C (1,612°F)</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>HAT-P-11: K-type star located ~123 light-years away.</li>
+                            <li>Temperature: ~5100 K</li>
+                            <li>Mass: ~0.75 M☉ (solar masses)</li>
+                            <li>Radius: ~0.75 R☉ (solar radii)</li>
+                            <li>Age: ~6.5 billion years</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>HAT-P-11b is not considered habitable due to its extreme temperatures and gaseous composition.</li>
+                            <li>The conditions present on the planet make it unsuitable for life as we know it.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2010 by the Kepler Space Telescope using the transit method.</li>
+                            <li>Future studies may focus on its atmospheric composition and the implications for understanding warm Neptunes.</li>
+                            <li>HAT-P-11b provides a valuable opportunity to study exoplanet atmospheres and their dynamics.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="projectModal2" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>GJ 436b: A Warm Neptune Exoplanet</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/gj436b.jpg" alt="img of Kepler-452b">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~33 light-years</li>
+                            <li>GJ 436b is a "warm Neptune" and exhibits a comet-like tail caused by intense radiation from its host star stripping away its atmosphere. Its atmosphere is predominantly composed of hydrogen and helium, and it orbits very close to its parent star.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 2.64 days</li>
+                            <li>Semi-major Axis: ~0.0291 AU</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+    
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~0.07 Jupiter masses (~23.2 Earth masses)</li>
+                            <li>Radius: ~0.37 Jupiter radii (~4.3 Earth radii)</li>
+                            <li>Temperature: ~712°C (1,314°F)</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>GJ 436: A M-type star located ~33 light-years away.</li>
+                            <li>Temperature: ~3400 K</li>
+                            <li>Mass: ~0.73 M☉ (solar masses)</li>
+                            <li>Radius: ~0.33 R☉ (solar radii)</li>
+                            <li>Age: ~6 billion years</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal3" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Kepler-101b: A Neptune-Sized Exoplanet</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/kepler101b.jpg" alt="img of keplar62f">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~3,150 light-years</li>
+                            <li>Kepler-101b is a Neptune-sized planet with a thick gaseous envelope. It has an unusually high density for a Neptune-like planet, suggesting a large rocky core. The planet’s atmosphere is likely very volatile, with possible high levels of water vapor.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 3.5 days</li>
+                            <li>Semi-major Axis: ~0.045 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~0.16 Jupiter masses (~50.9 Earth masses)</li>
+                            <li>Radius: ~0.48 Jupiter radii (~5.5 Earth radii)</li>
+                            <li>Temperature: ~1,750°C (3,182°F)</li>
+                  
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>Kepler-101: A G-type star located ~3,150 light-years away.</li>
+                            <li>Temperature: ~5,800 K</li>
+                            <li>Mass: ~1.02 M☉ (solar masses)</li>
+                            <li>Radius: ~1.08 R☉ (solar radii)</li>
+                            <li>Age: ~3 billion years</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>Kepler-101b is not considered habitable due to its extreme temperatures and gaseous composition.</li>
+                            <li>The conditions present on the planet make it unsuitable for life as we know it.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2012 by the Kepler Space Telescope using the transit method.</li>
+                            <li>Future studies may focus on its atmospheric composition and the implications for understanding Neptune-like planets.</li>
+                            <li>Kepler-101b provides valuable insights into the diversity of exoplanets and their atmospheres.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectModal4" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>TOI-849b: A Stripped Neptune Exoplanet</h2>
+            <hr>
+            <div class="modal-body">
+                <div class="modal-row">
+                    <div class="column description">
+                        <img src="/assets/toi849b.jpg" alt="img of keplar62f">
+                    </div>
+                </div>
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>General Information</h3>
+                        <ul>
+                            <li>Distance from Earth: ~730 light-years</li>
+                            <li>TOI-849b is considered a "stripped Neptune," potentially representing the core of a gas giant that lost most of its gaseous envelope. It is a dense, rocky body with only a thin atmosphere, giving insights into planet formation and atmospheric loss processes.</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Orbital Characteristics</h3>
+                        <ul>
+                            <li>Orbital Period: 18.4 hours</li>
+                            <li>Semi-major Axis: ~0.0156 AU</li>
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Physical Characteristics</h3>
+                        <ul>
+                            <li>Mass: ~0.77 Jupiter masses</li>
+                            <li>Radius: ~0.35 Jupiter radii (~4 Earth radii)</li>
+                            <li>Temperature: ~1,500°C (2,732°F)</li>
+                  
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="modal-row">
+                    <div style="text-align: left;" class="column">
+                        <h3>Host Star</h3>
+                        <ul>
+                            <li>TOI-849: A K-type star located ~730 light-years away.</li>
+                            <li>Temperature: ~4,900 K</li>
+                            <li>Mass: ~0.81 M☉ (solar masses)</li>
+                            <li>Radius: ~0.85 R☉ (solar radii)</li>
+                            <li>Age: ~5 billion years</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Habitability Potential</h3>
+                        <ul>
+                            <li>TOI-849b is not considered habitable due to its extreme temperatures and lack of a substantial atmosphere.</li>
+                            <li>The planet's conditions make it unsuitable for life as we know it.</li>
+
+                        </ul>
+                    </div>
+                    <div style="text-align: left;" class="column">
+                        <h3>Discovery & Future Studies</h3>
+                        <ul>
+                            <li>Discovered in 2020 by the Transiting Exoplanet Survey Satellite (TESS) using the transit method.</li>
+                            <li>Future studies may focus on its composition and the implications for understanding "stripped" planets.</li>
+                            <li>TOI-849b serves as a key case study for the effects of atmospheric loss on planetary evolution.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

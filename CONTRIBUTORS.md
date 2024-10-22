@@ -2,7 +2,7 @@
 
 | ![Dibyadyuti Dutta](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%201.png) | ![Adityaraj Singh Rathore](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%203.png) |
 |:--:|:--:|
-| **Dibyadyuti Dutta** | **Adityaraj Singh Rathore** |
+| **Dibyadyuti Dutta (Project Lead)** | **Adityaraj Singh Rathore** |
 | [LinkedIn](https://www.linkedin.com/in/dibyadyuti-dutta) \| [GitHub](https://github.com/unknownguy49) | [LinkedIn](https://www.linkedin.com/in/adityaraj-singh-rathore-7033452b1) \| [GitHub](https://github.com/adityaraj-25) |
 
 | ![Aryan Puri](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%202.png) | ![Atmadip Bakshi](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%206.png) |

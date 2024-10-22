@@ -1,104 +1,16 @@
 # Meet the Contributors
 
-<table>
-  <tr>
-    <td style="width:400px;">
-      <table style="width:400px; height: 180px; border: 1px solid #ccc;">
-        <tr>
-          <td style="padding: 0px;">
-            <img src="assets/Group 1.png" alt="Dibyadyuti Dutta" style="height: 180px; object-fit: cover;">
-          </td>
-          <td>
-            <p style="font-weight: 700; font-size: 20px;">Dibyadyuti Dutta</p>
-            <p>Project Lead</p>
-              <a href="https://www.linkedin.com/in/dibyadyuti-dutta">LinkedIn</a><br>
-              <a href="https://github.com/unknownguy49">GitHub</a>
-          </td>
-        </tr>
-      </table>
-    </td>
-    <td style="width:400px;">
-      <table style="width:400px; height: 180px; border: 1px solid #ccc;">
-        <tr>
-          <td style="padding: 0px;">
-            <img src="assets/Group 3.png" alt="Adityaraj Singh Rathore" style="height: 180px; object-fit: cover;">
-          </td>
-          <td>
-            <p style="font-weight: 700; font-size: 20px;">Adityaraj Singh Rathore</p>
-            <p>Contributor</p>
-                <a href="https://www.linkedin.com/in/adityaraj-singh-rathore-7033452b1">LinkedIn</a><br>
-                <a href="https://github.com/adityaraj-25">GitHub</a>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  
-  <tr>
-    <td style="width:400px;">
-      <table style="width:400px; height: 180px; border: 1px solid #ccc;">
-        <tr>
-          <td style="padding: 0px;">
-            <img src="assets/Group 2.png" alt="Aryan Puri" style="height: 180px; object-fit: cover;">
-          </td>
-          <td>
-            <p style="font-weight: 700; font-size: 20px;">Aryan Puri</p>
-            <p>Contributor</p>
-              <a href="https://www.linkedin.com/in/aryan-puri-5b04b1293">LinkedIn</a><br>
-              <a href="https://github.com/Aryan-Puri-23">GitHub</a>
-          </td>
-        </tr>
-      </table>
-    </td>
-    <td style="width:400px;">
-      <table style="width:400px; height: 180px; border: 1px solid #ccc;">
-        <tr>
-          <td style="padding: 0px;">
-            <img src="assets/Group 6.png" alt="Atmadip Bakshi" style="height: 180px; object-fit: cover;">
-          </td>
-          <td>
-            <p style="font-weight: 700; font-size: 20px;">Atmadip Bakshi</p>
-            <p>Contributor</p>
-              <a href="https://www.linkedin.com/in/atmadipbakshi">LinkedIn</a><br>
-              <a href="https://github.com/AtmadipBakshi">GitHub</a>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
+| ![Dibyadyuti Dutta](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%201.png) | ![Adityaraj Singh Rathore](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%203.png) |
+|:--:|:--:|
+| **Dibyadyuti Dutta** | **Adityaraj Singh Rathore** |
+| [LinkedIn](https://www.linkedin.com/in/dibyadyuti-dutta) \| [GitHub](https://github.com/unknownguy49) | [LinkedIn](https://www.linkedin.com/in/adityaraj-singh-rathore-7033452b1) \| [GitHub](https://github.com/adityaraj-25) |
 
-  <tr>
-    <td style="width:400px;">
-      <table style="width:400px; height: 180px; border: 1px solid #ccc;">
-        <tr>
-          <td style="padding: 0px;">
-            <img src="assets/Group 4.png" alt="K Sashank Chandra" style="height: 180px; object-fit: cover;">
-          </td>
-          <td>
-            <p style="font-weight: 700; font-size: 20px;">K Sashank Chandra</p>
-            <p>Contributor</p>
-                <a href="https://www.linkedin.com/in/ksashank">LinkedIn</a><br>
-                <a href="https://github.com/sashank46">GitHub</a>
-          </td>
-        </tr>
-      </table>
-    </td>
-    <td style="width:400px;">
-      <table style="width:400px; height: 180px; border: 1px solid #ccc;">
-        <tr>
-          <td style="padding: 0px;">
-            <img src="assets/Group 5.png" alt="Vishal Ch" style="height: 180px; object-fit: cover;">
-          </td>
-          <td>
-            <p style="font-weight: 700; font-size: 20px;">Vishal Ch</p>
-            <p>Contributor</p>
-              <a href="https://www.linkedin.com/in/vishal-ch-2b2761292">LinkedIn</a><br>
-              <a href="https://github.com/Vishalch118">GitHub</a>
-            </ul>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
+| ![Aryan Puri](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%202.png) | ![Atmadip Bakshi](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%206.png) |
+|:--:|:--:|
+| **Aryan Puri** | **Atmadip Bakshi** |
+| [LinkedIn](https://www.linkedin.com/in/aryan-puri-5b04b1293) \| [GitHub](https://github.com/Aryan-Puri-23) | [LinkedIn](https://www.linkedin.com/in/atmadipbakshi) \| [GitHub](https://github.com/AtmadipBakshi) |
+
+| ![K Sashank Chandra](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%204.png) | ![Vishal Ch](https://github.com/unknownguy49/exoverse-exoplanet-explorer/raw/main/assets/Group%205.png) |
+|:--:|:--:|
+| **K Sashank Chandra** | **Vishal Ch** |
+| [LinkedIn](https://www.linkedin.com/in/ksashank) \| [GitHub](https://github.com/sashank46) | [LinkedIn](https://www.linkedin.com/in/vishal-ch-2b2761292) \| [GitHub](https://github.com/Vishalch118) |

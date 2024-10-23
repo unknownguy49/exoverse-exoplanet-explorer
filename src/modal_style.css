@@ -18,21 +18,6 @@ section {
     padding: 10px;
 }
 
-@media only screen and (max-width: 768px) {
-    #projects {
-        padding-left: 50px;
-        padding-right: 50px;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    section {
-        width: calc(100% - 20px);
-        margin: 10px auto;
-    }
-}
-
 #projects {
     display: grid;
     max-width: 1200px;
@@ -93,18 +78,6 @@ section {
 
 .thumbnail-content .btn:hover {
     background-color: #f9620b;
-}
-
-@media screen and (min-width: 601px) {
-    #projects {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        padding: 0 20px;
-    }
-
-    .project-thumbnail {
-        width: 100%;
-    }
 }
 
 @media screen and (min-width: 1025px) {
@@ -198,17 +171,6 @@ section {
     overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
-    .modal-row {
-        flex-direction: column;
-    }
-
-    .column {
-        flex-basis: auto;
-        width: 100%;
-    }
-}
-
 #backgroundVideo {
     position: fixed;
     top: 0;
@@ -229,4 +191,160 @@ section {
     border-radius: 30px;
     position: relative;
     margin: 100px auto;
+}
+
+@media only screen and (max-width: 1024px) {
+    #projects {
+        padding: 0 50px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .project-thumbnail {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 80%;
+        max-height: 70vh;
+    }
+
+    .modal img {
+        height: 200px;
+        margin: 50px auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    #projects {
+        padding: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .modal img {
+        height: 150px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    section {
+        padding: 5px;
+    }
+
+    #projects {
+        padding: 0 10px;
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .modal img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 768px) {
+    #backgroundVideo {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+  }
+
+  #backgroundVideo {
+    display: none;
+    }
+
+    body{
+        background-color: #000;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+        background-color: #1a1a1a;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .modal-body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .modal-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .column {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    .close {
+        font-size: 24px;
+        color: #f0f0f0;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .modal img {
+        height: 100px;
+        border-radius: 15px;
+        margin: 20px auto;
+    }
+
+    #pr h2, #pr p {
+        color: #f0f0f0;
+        font-size: 16px;
+    }
+
+    .thumbnail-content .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .modal-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .modal img {
+        height: 80px;
+        border-radius: 10px;
+    }
+
+    #pr h2, #pr p {
+        font-size: 14px;
+    }
+
+    .thumbnail-content .btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
 }

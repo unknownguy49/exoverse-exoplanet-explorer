@@ -146,29 +146,6 @@ hr{
     color: white;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        margin-top: 10px;
-    }
-
-    .nav-links li {
-        margin-left: 0;
-        margin-bottom: 10px;
-    }
-
-    .search-bar {
-        width: 100%;
-        margin-top: 10px;
-    }
-}
-
 footer {
 
     text-align: center;
@@ -176,29 +153,6 @@ footer {
     padding: 20px;
     color: #fff;
     background: linear-gradient(to bottom, #000, #292929);
-}
-
-@media only screen and (max-width: 768px) {
-    .types {
-        padding-left: 50px;
-        padding-right: 50px;
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    footer {
-        padding: 15px;
-    }
-
-    section {
-        width: calc(100% - 20px);
-        margin: 10px auto;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
 }
 
 body {
@@ -398,38 +352,6 @@ body {
   flex-direction: column;
 }
 
-@media screen and (max-width: 520px) {
-  .screen-body {
-    flex-direction: column;
-  }
-
-  .screen-body-item.left {
-    margin-bottom: 30px;
-  }
-
-  .app-title {
-    flex-direction: row;
-  }
-
-  .app-title span {
-    margin-right: 12px;
-  }
-
-  .app-title:after {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .screen-body {
-    padding: 40px;
-  }
-
-  .screen-body-item {
-    padding: 0;
-  }
-}
-
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body { background:rgb(30,30,40); }
@@ -491,8 +413,6 @@ textarea {
   html,
   body {
     height: 100%;
-    /* for touch screen */
-    touch-action: none; 
   }
   
   .team {
@@ -631,17 +551,7 @@ textarea {
       }
   }
   
-  @media (max-width:500px) {
-      .github-corner:hover .octo-arm {
-          animation: none
-      }
-  
-      .github-corner .octo-arm {
-          animation: octocat-wave 560ms ease-in-out
-      }
-  }
-  
- .types {
+  .types {
     padding-top: 30px;
     padding-bottom: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -795,4 +705,142 @@ please remove if makes the deployed website bad*/
 .wrapper .youtube:hover .tooltip::before {
   background: #CD201F;
   color: #ffffff;
+}
+
+.hidden-text {
+  display: none;
+}
+
+/* Responsiveness (all previous responsiveness removed and this is final)*/
+
+@media (max-width: 768px) {
+  #backgroundVideo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Disable the video on smaller screens for better performance */
+@media (max-width: 768px) {
+
+  .introduction h1 {
+    font-size: 32px;
+    
+  }
+
+  #backgroundVideo {
+        display: none;
+    }
+  }
+
+  body{
+    background-color: #000;
+  }
+
+  .contact p{
+    padding: auto;
+    margin: 15px 30px;
+  }
+
+  .quiz{
+    padding: auto;
+    margin: 15px 30px;
+  }
+
+  .quiz h1{
+    font-size: 32px;
+  }
+
+  footer{
+    font-size: 16px;
+  }
+
+  #myform {
+    padding: auto;
+    margin: 15px 20px;
+  }
+
+  .team {
+    padding: auto;
+    margin: 0 10px;
+  }
+
+  #spin-container img {
+    width: 140px;
+    height: auto;
+  }
+
+  #ground {
+    width: 900px;
+    height: 900px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%) rotateX(90deg);
+            transform: translate(-50%,-50%) rotateX(90deg);
+    background: -webkit-radial-gradient(center center, farthest-side , #9993, transparent);
+  }
+
+  .grid-container {
+    justify-content: center;
+  }
+
+  .introduction {
+      margin: auto 20px;
+  }
+
+  .navbar-left {
+      padding-left: 20%;
+  }
+
+  .navbar-right {
+    display:none;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+  }
+
+  .navbar-toggle {
+      display: block;
+      color: #fff;
+      font-size: 30px;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+}
+
+/* Adjust grid for smaller screens */
+@media (max-width: 768px) {
+  .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+      font-size: 36px;
+  }
+
+  .grid-container {
+      gap: 15px;
+  }
+
+  .grid-item {
+      width: 200px;
+      height: 200px;
+  }
+
+  .circle-img {
+      width: 130px;
+  }
 }

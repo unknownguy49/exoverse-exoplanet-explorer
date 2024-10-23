@@ -152,7 +152,7 @@
             background: black;
             padding: 20px;
             border: 1px solid white;
-            margin-top: 180px;
+            margin-top: 140px;
         }
 
         .quiz-content {
@@ -273,6 +273,41 @@
         @media (max-width: 600px) {
             .quiz-container {
                 padding: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar-left {
+                margin-left: 50px;
+            }
+
+            .quiz-container {
+                margin-top: 60px;
+            }
+
+            .quiz-container{
+                border:none;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #backgroundVideo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        #backgroundVideo {
+            display: none;
+            }
+
+            body{
+                background-color: #000;
             }
         }
     </style>

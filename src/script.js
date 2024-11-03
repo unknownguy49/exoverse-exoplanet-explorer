@@ -193,3 +193,19 @@ document.getElementById("myform").onsubmit = function(e) {
 //   typeFact(facts[factIndex]);
 //   trackResourceLoading(); // Start tracking image loading
 // });
+
+//added smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute("href");
+      if (targetId === '#home') { // If the target is the home section
+          location.reload(); // Reload the page
+      } else {
+          document.querySelector(targetId).scrollIntoView({
+              behavior: "smooth",
+          });
+      }
+  });
+});

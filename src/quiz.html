@@ -537,29 +537,29 @@ function selectAnswer(selectedIndex) {
 }
 
 
-        function updateRocketPosition() {
-            const progress = ((currentQuestionIndex + 1) / totalQuestions) * progressBarHeight;
-            rocket.style.bottom = `${progress}px`;
-        }
+    function updateRocketPosition() {
+        const progress = ((currentQuestionIndex) / totalQuestions) * progressBarHeight;
+        rocket.style.bottom = `${progress}px`;
+    }
 
-        function showFinalScore() {
-    questionElement.textContent = `Quiz Completed! You answered ${currentQuestionIndex} out of ${totalQuestions} questions.`;
-    optionsElement.innerHTML = '';
-    feedbackElement.textContent = `Total time taken: ${totalTime.toFixed(2)} seconds`;
-    nextButton.style.display = 'none';
+    function showFinalScore() {
+        questionElement.textContent = `Quiz Completed! You answered ${currentQuestionIndex} out of ${totalQuestions} questions.`;
+        optionsElement.innerHTML = '';
+        feedbackElement.textContent = `Total time taken: ${totalTime.toFixed(2)} seconds`;
+        nextButton.style.display = 'none';
 
-    // Center the text
-    feedbackElement.style.textAlign = 'center';
-    questionElement.style.textAlign = 'center';
+        // Center the text
+        feedbackElement.style.textAlign = 'center';
+        questionElement.style.textAlign = 'center';
 
-    // Rocket flies away and increases in size
-    rocket.classList.add('rocket-fly');
+        // Rocket flies away and increases in size
+        rocket.classList.add('rocket-fly');
 
-    // Set a timeout to hide the progress bar after the animation duration
-    setTimeout(() => {
-        document.querySelector('.progress-bar').style.display = 'none';
-    }, 2000); // Adjust the time (in milliseconds) according to your animation duration
-}
+        // Set a timeout to hide the progress bar after the animation duration
+        setTimeout(() => {
+            document.querySelector('.progress-bar').style.display = 'none';
+        }, 2000); // Adjust the time (in milliseconds) according to your animation duration
+    }
 
 
 
